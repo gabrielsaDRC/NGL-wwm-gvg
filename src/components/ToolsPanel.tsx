@@ -218,14 +218,6 @@ export function ToolsPanel() {
             <Trash2 className="w-4 h-4" />
             Clear Markings
           </button>
-
-          <button
-            onClick={resetAll}
-            className="w-full bg-red-500 hover:bg-red-600 text-white py-2 px-3 rounded-lg font-medium flex items-center justify-center gap-2 transition-all shadow-sm"
-          >
-            <RotateCcw className="w-4 h-4" />
-            Reset All
-          </button>
         </div>
       </div>
     </div>
