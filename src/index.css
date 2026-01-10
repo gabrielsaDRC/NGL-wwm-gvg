@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #d97706 #1c1917;
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #1c1917;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #d97706;
+    border-radius: 4px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: #f59e0b;
+  }
+
+  body {
+    font-family: 'Noto Serif SC', serif, system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-wuxia-pattern {
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(217, 119, 6, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(217, 119, 6, 0.05) 0%, transparent 50%);
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-01-10T12:00:00.000Z",
+  "teams": [
+    {
+      "id": 1,
+      "name": "Team 1 — Vanguard",
+      "color": "#ef4444"
+    },
+    {
+      "id": 2,
+      "name": "Team 2 — Phoenix",
+      "color": "#f59e0b"
+    },
+    {
+      "id": 3,
+      "name": "Team 3 — Dragon",
+      "color": "#10b981"
+    },
+    {
+      "id": 4,
+      "name": "Team 4 — Tiger",
+      "color": "#3b82f6"
+    },
+    {
+      "id": 5,
+      "name": "Team 5 — Crane",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": 6,
+      "name": "Team 6 — Serpent",
+      "color": "#ec4899"
+    }
+  ],
+  "players": [
+    {
+      "id": "uuid-1",
+      "name": "PlayerOne",
+      "class": "Tank",
+      "teamId": 1,
+      "isLeader": true
+    },
+    {
+      "id": "uuid-2",
+      "name": "PlayerTwo",
+      "class": "Healer",
+      "teamId": 1
+    },
+    {
+      "id": "uuid-3",
+      "name": "PlayerThree",
+      "class": "DPS Strategic",
+      "teamId": 1
+    }
+  ],
+  "strategyNotes": "Main strategy:\n\n1. Team 1 (Vanguard) takes North Gate\n2. Team 2 (Phoenix) provides ranged support from Hill\n3. Teams 3-4 flank from East and West\n4. Teams 5-6 defend South resources\n\nTiming: Engage at 15:00 game time\nFallback point: Southern checkpoint",
+  "map": {
+    "backgroundImage": {
+      "name": "gvg-map.jpg",
+      "url": "data:image/jpeg;base64,...",
+      "width": 1920,
+      "height": 1080
+    },
+    "viewport": {
+      "zoom": 1,
+      "panX": 0,
+      "panY": 0
+    },
+    "elements": [
+      {
+        "id": "elem-1",
+        "type": "teamToken",
+        "x": 500,
+        "y": 300,
+        "teamId": 1,
+        "size": 60
+      },
+      {
+        "id": "elem-2",
+        "type": "marker",
+        "x": 700,
+        "y": 400,
+        "icon": "flag",
+        "label": "Objective A",
+        "color": "#ef4444",
+        "size": 30
+      },
+      {
+        "id": "elem-3",
+        "type": "arrow",
+        "x": 500,
+        "y": 300,
+        "x2": 700,
+        "y2": 400,
+        "color": "#fbbf24",
+        "width": 3,
+        "label": "Attack Route"
+      },
+      {
+        "id": "elem-4",
+        "type": "area",
+        "x": 600,
+        "y": 350,
+        "width": 200,
+        "height": 150,
+        "color": "#10b981",
+        "opacity": 0.3,
+        "shape": "rectangle"
+      },
+      {
+        "id": "elem-5",
+        "type": "text",
+        "x": 700,
+        "y": 425,
+        "content": "Control Point",
+        "color": "#fbbf24",
+        "fontSize": 16
+      }
+    ]
+  }
+}
