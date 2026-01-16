@@ -65,27 +65,26 @@ export function RosterPanel() {
   };
 
   return (
-    <div className="w-80 bg-white border-r-2 border-gray-200 flex flex-col h-screen overflow-hidden">
+    <div className="w-80 bg-white border-r-2 border-gray-200 flex flex-col h-screen overflow-hidden min-h-0">
       <div className="p-4 border-b-2 border-gray-200 bg-gray-50">
         <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2 mb-3">
           <Users className="w-6 h-6" />
           Roster
         </h2>
         <div className="text-sm text-gray-700 mb-3 font-medium">
-          Players: {state.players.length}/30
+          Players: {state.players.length}
         </div>
         <button
           onClick={() => setShowAddModal(true)}
-          disabled={state.players.length >= 30}
-          className="w-full bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white py-2 px-4 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all shadow-sm"
+          className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all shadow-sm"
         >
           <Plus className="w-4 h-4" />
           Add Player
         </button>
       </div>
 
-      <div className="flex-1 overflow-y-auto">
-        <div className="p-4 space-y-4">
+      <div className="flex-1 min-h-0 overflow-y-auto">
+        <div className="p-4 pb-20 space-y-4">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-green-600" />
             <input
@@ -257,7 +256,7 @@ function TeamCard({
           className="w-6 h-6 rounded cursor-pointer ml-2"
         />
       </div>
-      <div className="bg-gray-50 p-2">
+      <div className="bg-gray-50 p-2 pb-5">
         <div className="text-xs text-gray-700 mb-1 font-medium">
           Members: {players.length}
           {Object.keys(classCounts).length > 0 && (
@@ -270,7 +269,7 @@ function TeamCard({
             </span>
           )}
         </div>
-        <div className="space-y-1">
+        <div className="space-y-1 pb-4">
           {players.map((player) => (
             <PlayerCard
               key={player.id}
